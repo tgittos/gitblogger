@@ -1,0 +1,4 @@
+
+
+Processing GithubController#index (for 127.0.0.1 at 2012-06-14 17:42:05) [GET]
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/]
