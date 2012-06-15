@@ -1,0 +1,14 @@
+---
+title: <%= commit["message"] %> on <%= @repo %>
+description: <%= commit["desc"] %>
+layout: post
+tags: github commit code <%= @repo %>
+---
+
+<%= commit["desc"] %>
+
+<% commit["diffs"].each do |diff| %>
+
+<%= diff.html_safe %>
+
+<% end %>
