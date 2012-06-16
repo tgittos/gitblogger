@@ -352,3 +352,9 @@ Started POST "/" for 127.0.0.1 at 2012-06-15 17:00:57 -0500
 Rendered github/index.html.erb (68.4ms)
 Rendered text template (0.4ms)
 Completed 200 OK in 8459ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 66.68.144.57 at 2012-06-16 16:55:34 -0400
+  Processing by GithubController#index as HTML
+Rendered text template (0.0ms)
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.0ms)

@@ -25,12 +25,12 @@ module Github
   end
 
   def self.write_and_publish_post(filename, content)
-    post_location = File.join('.', '../blog.confirmedcrit.com/jekyll/commits/_posts')
+    post_location = File.join('.', '../blog/commits/_posts')
     open(File.join(post_location, filename), 'w') do |f|
       f.puts content
     end
-    `jekyll ../blog.confirmedcrit.com/jekyll ../blog.confirmedcrit.com/jekyll/_site`
-    `(cd ../blog.confirmedcrit.com/jekyll && git add -A && git commit -m 'Gitblogger added some commits' && git push)`
+    `jekyll ../blog ../blog/_site`
+    `(cd ../blog && git add -A && git commit -m 'Gitblogger added some commits' && git push)`
   end
 
 end
