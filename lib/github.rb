@@ -14,7 +14,7 @@ module Github
       url = commit["url"]
       doc = Nokogiri::HTML(open(url))
       # extract the diff for this commit
-      commit["desc"] = doc.css(".commit-desc").to_s
+      commit["desc"] = doc.css(".commit-desc pre").first.content.gsub(/\n/, ' ').squeeze(' ')
       doc.css('#files .file').each do |diff|
         commit["diffs"] << diff.to_s
       end

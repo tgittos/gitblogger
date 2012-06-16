@@ -20,6 +20,7 @@ class GithubController < ApplicationController
 
   def write_posts(data)
     data["commits"].each do |commit|
+      commit["message"] = commit["message"].split("\n").first
       post = render_to_string(:action => 'index', :locals => { :commit => commit })
       Github.write_and_publish_post get_title(commit), post
     end
