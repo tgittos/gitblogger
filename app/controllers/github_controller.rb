@@ -27,7 +27,7 @@ class GithubController < ApplicationController
   end
 
   def get_title(commit)
-    "#{Date.today.strftime("%Y-%m-%d")}-#{commit["message"].downcase.gsub(/\s/,'-').gsub(/[^A-Za-z0-9\-]/, '')}.textile"
+    "#{Date.today.strftime("%Y-%m-%d")}-#{commit["message"].downcase.gsub(/\s/,'-').gsub(/[^A-Za-z0-9\-]/, '')}-on-#{@repo}.textile"
   end
 
 end
