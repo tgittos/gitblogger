@@ -3,7 +3,7 @@ title: <%= commit["message"] %> on <%= @repo %>
 description: <%= commit["desc"] %>
 layout: post
 tags: github commit code <%= @repo %>
-date: <%= Time.now.strftime("%Y-%m-%D %H-%M-%S") %>
+date: <%= Time.now.strftime("%Y-%m-%d %H:%M:%S") %>
 ---
 
 <%= commit["desc"] %>
