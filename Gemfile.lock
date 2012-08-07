@@ -56,7 +56,10 @@ GEM
       treetop (~> 1.4.8)
     maruku (0.6.0)
       syntax (>= 1.0.0)
+    metaclass (0.0.1)
     mime-types (1.18)
+    mocha (0.12.3)
+      metaclass (~> 0.0.1)
     nokogiri (1.5.4)
     polyglot (0.3.3)
     posix-spawn (0.3.6)
@@ -95,6 +98,7 @@ PLATFORMS
 DEPENDENCIES
   RedCloth
   jekyll
+  mocha
   nokogiri
   rails (= 3.0.3)
   sqlite3-ruby

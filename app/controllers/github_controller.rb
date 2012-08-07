@@ -22,7 +22,7 @@ class GithubController < ApplicationController
     data["commits"].each do |commit|
       commit["message"] = commit["message"].split("\n").first
       post = render_to_string(:action => 'index', :locals => { :commit => commit })
-      Github.write_and_publish_post get_title(commit), post
+      Github.write_and_publish_post get_title(commit), post, @repo
     end
   end
 

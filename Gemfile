@@ -10,6 +10,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'nokogiri'
 gem 'jekyll'
 gem 'RedCloth'
+gem 'mocha'
 
 # Use unicorn as the web server
 # gem 'unicorn'
