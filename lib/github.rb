@@ -31,8 +31,8 @@ module Github
     File.open(File.join(post_location, filename), 'w') do |f|
       f.puts content
     end
-    #`jekyll #{APP_CONFIG['blog']['jekyll']['root']} #{APP_CONFIG['blog']['jekyll']['output']}`
-    #`(cd #{APP_CONFIG['blog']['jekyll']['root']} && git add -A && git commit -m 'Gitblogger added some commits' && git push)`
+    `jekyll #{APP_CONFIG['blog']['jekyll']['root']} #{APP_CONFIG['blog']['jekyll']['output']}`
+    `(cd #{APP_CONFIG['blog']['jekyll']['root']} && git add -A && git commit -m 'Gitblogger added some commits' && git push)`
   end
 
   def self.ensure_category_for_repo(repo)
