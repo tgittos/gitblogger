@@ -19,6 +19,7 @@ class GithubController < ApplicationController
   private
 
   def write_posts(data)
+    logger.info "Writing #{data["commits"].length} commits to file"
     data["commits"].each do |commit|
       commit["message"] = commit["message"].split("\n").first
       post = render_to_string(:action => 'index', :locals => { :commit => commit })
@@ -27,7 +28,7 @@ class GithubController < ApplicationController
   end
 
   def get_title(commit)
-    "#{Date.today.strftime("%Y-%m-%d")}-#{commit["message"].downcase.gsub(/\s/,'-').gsub(/[^A-Za-z0-9\-]/, '')}-on-#{@repo}.textile"
+    "#{Date.today.strftime("%Y-%m-%d")}-#{commit["message"].downcase.gsub(/\s/,'-').gsub(/[^A-Za-z0-9\-]/, '')}-on-#{@repo}.textile".squeeze('-')
   end
 
 end
