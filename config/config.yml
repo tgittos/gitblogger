@@ -1,5 +1,5 @@
 blog:
-  path: ""
+  path: "/Users/timg/src/personal/gitblogger/junk"
   jekyll:
     root: ""
     output: ""
