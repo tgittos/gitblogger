@@ -1,5 +1,6 @@
 .rbenv*
 .rvmrc
-db
+db/*
 tmp
 log
+config/config.yml
